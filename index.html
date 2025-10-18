@@ -181,7 +181,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 
       <!-- Mactan Hopping -->
       <article class="tour-card">
-        <img src="img/mactan-hopping.jpg" alt="Mactan island hopping boat and sandbar" loading="lazy">
+        <img src="mactan-hopping.jpeg" alt="Mactan island hopping boat and sandbar" loading="lazy">
         <div class="content">
           <h3 data-lang="ko">막탄 아일랜드 호핑</h3>
           <h3 data-lang="en">Mactan Island Hopping</h3>
@@ -195,7 +195,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 
       <!-- Cebu City Private -->
       <article class="tour-card">
-        <img src="img/cebu-city-private.jpg" alt="Cebu city private tour viewpoints" loading="lazy">
+        <img src="img/cebu-city-private.jpeg" alt="Cebu city private tour viewpoints" loading="lazy">
         <div class="content">
           <h3 data-lang="ko">세부시티 단독 프라이빗</h3>
           <h3 data-lang="en">Cebu City Private Tour</h3>
@@ -212,57 +212,7 @@ window.addEventListener('DOMContentLoaded',()=>{
       <a class="btn primary" href="https://smartstore.naver.com/olivec" target="_blank" rel="noopener">Naver Store — Book Now</a>
       <a class="btn" href="https://www.kkday.com/ko" target="_blank" rel="noopener">Book on KKDAY</a>
     </div>
-  </div>
-
-  /* === Tours gallery (fixed-size) === */
-.tour-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-  margin-top:12px;
-}
-.tour-card{
-  background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:16px;
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-}
-
-/* 이미지: 모두 동일 높이로 중앙 크롭 */
-.tour-card img{
-  width:100%;
-  height:240px;          /* ← 보기 좋은 고정 높이(220~300px 취향대로 조정 가능) */
-  object-fit:cover;      /* 넘치는 부분은 깔끔히 잘라서 꽉 채움 */
-  object-position:center;
-  display:block;
-}
-
-/* 본문 영역 */
-.tour-card .content{
-  padding:14px;
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-}
-
-/* 작은 태그들 */
-.tour-meta{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:6px;
-}
-.tour-meta .tag{ font-size:11px }
-
-/* 반응형: 모바일에서 이미지 살짝 낮춤 */
-@media (max-width:900px){
-  .tour-grid{ grid-template-columns:1fr }
-  .tour-card img{ height:200px; }
-}
-
-  
+  </div> 
 </section>
 
     <hr>
