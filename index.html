@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>갓투어 | GodTour — 세부 현지 여행사</title>
+<meta name="description" content="갓투어(GodTour)는 필리핀 세부/막탄을 중심으로 현지 투어, 차량, 가이드 서비스를 제공합니다. KKday/클룩 입점용 공식 회사 소개 페이지.">
+<link rel="icon" href="favicon.png">
+<meta property="og:title" content="갓투어 | GodTour — Cebu Local Tour Operator">
+<meta property="og:description" content="세부 현지 투어/차량/가이드 전문, 공식 회사 소개 페이지">
+<meta property="og:image" content="og.jpg">
+<meta property="og:type" content="website">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="styles.css">
+<script>
+function setLang(l){ 
+  document.querySelectorAll('[data-lang]').forEach(el=>{
+    el.style.display = el.getAttribute('data-lang')===l ? '' : 'none';
+  });
+  document.querySelectorAll('.lang a').forEach(a=>{
+    a.classList.toggle('active', a.getAttribute('data-l')===l);
+  });
+  location.hash = l;
+}
+window.addEventListener('DOMContentLoaded',()=>{
+  const h = location.hash.replace('#','');
+  setLang(h==='en'?'en':'ko');
+});
+</script>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <img src="favicon.png" alt="GodTour" width="28" height="28" style="border-radius:6px">
+        <span>갓투어 <span class="badge">Official</span></span>
+      </div>
+      <div class="lang">
+        <a href="#ko" data-l="ko" onclick="setLang('ko')">한국어</a>
+        <a href="#en" data-l="en" onclick="setLang('en')">English</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div class="card">
+        <div data-lang="ko">
+          <h1>세부 로컬 투어·차량·가이드 — <span style="color:var(--accent)">갓투어</span></h1>
+          <p>갓투어(GodTour)는 필리핀 <b>세부/막탄</b>을 기반으로 <b>섬투어, 호핑투어, 차량/가이드</b>를 제공하는 <b>현지 여행사</b>입니다.</p>
+          <div class="tagrow">
+            <span class="tag">현지 가이드 네트워크</span>
+            <span class="tag">합법 차량 운영</span>
+            <span class="tag">한국어/영어 상담</span>
+          </div>
+          <div class="cta">
+            <a class="btn primary" href="#contact">문의/예약</a>
+            <a class="btn" href="#licenses">사업자·허가증</a>
+          </div>
+        </div>
+        <div data-lang="en">
+          <h1>Cebu Local Tours, Transport & Guides — <span style="color:var(--accent)">GodTour</span></h1>
+          <p>GodTour is a <b>local tour operator</b> in <b>Cebu/Mactan</b>, Philippines, offering <b>island & hopping tours, transport, and licensed guides</b>.</p>
+          <div class="tagrow">
+            <span class="tag">Local guide network</span>
+            <span class="tag">Legal transport fleet</span>
+            <span class="tag">KR/EN support</span>
+          </div>
+          <div class="cta">
+            <a class="btn primary" href="#contact">Contact/Booking</a>
+            <a class="btn" href="#licenses">Business Permits</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="kv">
+          <div><b>Company</b><br>GodTour (갓투어)</div>
+          <div><b>Location</b><br>Cebu · Mactan, Philippines</div>
+          <div><b>Email</b><br><a href="mailto:hello@godtour.ph">hello@godtour.ph</a></div>
+          <div><b>Phone / WhatsApp</b><br>+63-9XX-XXX-XXXX</div>
+        </div>
+        <p class="notice" style="margin-top:8px">* 위 연락처는 예시입니다. 실제 정보로 교체하세요.</p>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2 data-lang="ko">우리의 서비스</h2>
+        <h2 data-lang="en">What We Offer</h2>
+        <ul data-lang="ko">
+          <li>섬·호핑투어 (모알보알, 오슬롭, 말라파스쿠아 등)</li>
+          <li>공항 픽업/샌딩 & 전일 차량+가이드</li>
+          <li>단체/학사연수/기업 체험 프로그램</li>
+        </ul>
+        <ul data-lang="en">
+          <li>Island & Hopping tours (Moalboal, Oslob, Malapascua, etc.)</li>
+          <li>Airport pickup/transfer & full‑day transport+guide</li>
+          <li>Groups, study tours, corporate experiences</li>
+        </ul>
+      </div>
+      <div class="card" id="licenses">
+        <h2 data-lang="ko">사업자·허가증</h2>
+        <h2 data-lang="en">Business Permits</h2>
+        <p data-lang="ko">아래는 심사를 위한 기본 정보입니다. 실제 증서 번호/유효기간을 기입하세요.</p>
+        <p data-lang="en">Details for verification. Replace with real certificate numbers/validity.</p>
+        <div class="kv">
+          <div><b>DTI#</b><br>DTI-XXXX-XXXX</div>
+          <div><b>Mayor’s Permit#</b><br>MP-XXXX-XXXX</div>
+          <div><b>TIN</b><br>XXXXXXXXX</div>
+          <div><b>Accreditation</b><br>(if any)</div>
+        </div>
+      </div>
+      <div class="card" id="contact">
+        <h2 data-lang="ko">문의/예약</h2>
+        <h2 data-lang="en">Contact / Booking</h2>
+        <p data-lang="ko">이메일 <a href="mailto:hello@godtour.ph">hello@godtour.ph</a> 또는 WhatsApp <b>+63-9XX-XXX-XXXX</b></p>
+        <p data-lang="en">Email <a href="mailto:hello@godtour.ph">hello@godtour.ph</a> or WhatsApp <b>+63-9XX-XXX-XXXX</b></p>
+        <div class="cta">
+          <a class="btn" href="https://forms.gle/" target="_blank" rel="noreferrer">Google Form 예약(옵션)</a>
+          <a class="btn" href="mailto:hello@godtour.ph?subject=Booking%20Request%20-%20GodTour&body=Name%3A%0ADate%3A%0AService%3A%0AGuests%3A%0AWhatsApp%3A%0ANotes%3A">이메일 양식</a>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+    <div class="footer">
+      <div data-lang="ko">© <span id="y"></span> 갓투어 (GodTour). All rights reserved. · 본 페이지는 공식 회사 소개용입니다.</div>
+      <div data-lang="en">© <span id="y2"></span> GodTour. Official company intro page.</div>
+      <script>
+        document.getElementById('y').textContent = new Date().getFullYear();
+        document.getElementById('y2').textContent = new Date().getFullYear();
+      </script>
+    </div>
+  </div>
+</body>
+</html>
