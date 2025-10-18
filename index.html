@@ -24,7 +24,8 @@ function setLang(l){
 }
 window.addEventListener('DOMContentLoaded',()=>{
   const h = location.hash.replace('#','');
-  setLang(h==='en'?'en':'ko');
+  const supported = ['ko','en','ja','zh'];
+  setLang(supported.includes(h)?h:'ko');
 });
 </script>
 </head>
@@ -38,11 +39,14 @@ window.addEventListener('DOMContentLoaded',()=>{
       <div class="lang">
         <a href="#ko" data-l="ko" onclick="setLang('ko')">한국어</a>
         <a href="#en" data-l="en" onclick="setLang('en')">English</a>
+        <a href="#ja" data-l="ja" onclick="setLang('ja')">日本語</a>
+        <a href="#zh" data-l="zh" onclick="setLang('zh')">中文</a>
       </div>
     </div>
 
     <section class="hero">
       <div class="card">
+        <!-- KO -->
         <div data-lang="ko">
           <h1>세부 로컬 투어·차량·가이드 — <span style="color:var(--accent)">갓투어</span></h1>
           <p>갓투어(GodTour)는 필리핀 <b>세부/막탄</b>을 기반으로 <b>섬투어, 호핑투어, 차량/가이드</b>를 제공하는 <b>현지 여행사</b>입니다.</p>
@@ -56,6 +60,7 @@ window.addEventListener('DOMContentLoaded',()=>{
             <a class="btn" href="https://www.kkday.com/ko">KKDAY 예약 바로가기</a>
           </div>
         </div>
+        <!-- EN -->
         <div data-lang="en">
           <h1>Cebu Local Tours, Transport & Guides — <span style="color:var(--accent)">GodTour</span></h1>
           <p>GodTour is a <b>local tour operator</b> in <b>Cebu/Mactan</b>, Philippines, offering <b>island & hopping tours, transport, and licensed guides</b>.</p>
@@ -69,156 +74,260 @@ window.addEventListener('DOMContentLoaded',()=>{
             <a class="btn" href="https://www.kkday.com/ko">Book on KKDAY</a>
           </div>
         </div>
+        <!-- JA -->
+        <div data-lang="ja">
+          <h1>セブのローカルツアー・車両・ガイド — <span style="color:var(--accent)">GodTour</span></h1>
+          <p>GodTour は<b>セブ／マクタン</b>を拠点に、<b>アイランド／ホッピングツアー、送迎・専用車、ライセンスガイド</b>を提供する<b>現地旅行会社</b>です。</p>
+          <div class="tagrow">
+            <span class="tag">現地ガイドネットワーク</span>
+            <span class="tag">正規車両運行</span>
+            <span class="tag">韓国語／英語対応</span>
+          </div>
+          <div class="cta">
+            <a class="btn primary" href="https://smartstore.naver.com/olivec">ネイバーストアで予約</a>
+            <a class="btn" href="https://www.kkday.com/ko">KKDAYで予約</a>
+          </div>
+        </div>
+        <!-- ZH -->
+        <div data-lang="zh">
+          <h1>宿务本地 旅游·车辆·向导 — <span style="color:var(--accent)">GodTour</span></h1>
+          <p>GodTour 是<b>菲律宾宿务／麦克坦</b>的<b>本地旅行社</b>，提供<b>离岛/跳岛游、车辆接送与包车、持证向导</b>服务。</p>
+          <div class="tagrow">
+            <span class="tag">本地向导网络</span>
+            <span class="tag">合法车辆运营</span>
+            <span class="tag">韩英双语客服</span>
+          </div>
+          <div class="cta">
+            <a class="btn primary" href="https://smartstore.naver.com/olivec">前往 Naver 商店预订</a>
+            <a class="btn" href="https://www.kkday.com/ko">前往 KKDAY 预订</a>
+          </div>
+        </div>
       </div>
+
+      <!-- Company Info Card -->
       <div class="card">
+        <!-- KO/EN: 공통 표시 -->
         <div class="kv">
           <div><b>Company</b><br>GodTour (CGT TOUR CORP.)</div>
           <div><b>Location</b><br>Cebu · Mactan, Philippines</div>
-          <div><b>Email</b><br><a href="mailto:hello@godtour.ph">9878921@naver.com</a></div>
+          <div><b>Email</b><br><a href="mailto:9878921@naver.com">9878921@naver.com</a></div>
           <div><b>Phone / WhatsApp</b><br>+63-934-441-4030</div>
         </div>
-        <p class="notice" style="margin-top:8px">* 위 연락처는 예시입니다. 실제 정보로 교체하세요.</p>
-      </div>
     </section>
 
     <section class="grid">
       <div class="card">
         <h2 data-lang="ko">세부 갓투어 서비스</h2>
         <h2 data-lang="en">What We Offer</h2>
+        <h2 data-lang="ja">セブ GodTour のサービス</h2>
+        <h2 data-lang="zh">GodTour 宿务服务</h2>
+
+        <!-- KO -->
         <ul data-lang="ko">
           <li>섬·호핑투어 (모알보알, 오슬롭, 말라파스쿠아 등)</li>
           <li>공항 픽업/샌딩 & 전일 차량+가이드 & 어메이징쇼 티켓</li>
           <li>단체/학사연수/기업 체험 프로그램</li>
         </ul>
+        <!-- EN (오타 수정 반영) -->
         <ul data-lang="en">
           <li>Island & Hopping tours (Moalboal, Oslob, Malapascua, etc.)</li>
-          <li>Airport pickup/transfer & full‑day transport+guide & amazingshow tiket</li>
+          <li>Airport pickup/transfer & full-day transport+guide & Amazing Show tickets</li>
           <li>Groups, study tours, corporate experiences</li>
         </ul>
+        <!-- JA -->
+        <ul data-lang="ja">
+          <li>アイランド・ホッピング（モアルボアル／オスロブ／マラパスクア 等）</li>
+          <li>空港送迎＆終日専用車＋ガイド／Amazing Show チケット手配</li>
+          <li>団体・研修・企業向けプログラム</li>
+        </ul>
+        <!-- ZH -->
+        <ul data-lang="zh">
+          <li>离岛／跳岛游（莫阿尔博阿尔、奥斯洛布、马拉帕斯夸等）</li>
+          <li>机场接送＆全天用车+向导／Amazing Show 票务</li>
+          <li>团体／研学／企业项目</li>
+        </ul>
       </div>
+
       <div class="card" id="licenses">
         <h2 data-lang="ko">사업자·허가증</h2>
         <h2 data-lang="en">Business Permits</h2>
+        <h2 data-lang="ja">事業者・許認可</h2>
+        <h2 data-lang="zh">经营资质</h2>
         <div class="kv">
           <div><b>SEC#</b><br>NO. 2022120078955-01</div>
           <div><b>Mayor’s Permit#</b><br>017010340</div>
         </div>
       </div>
+
       <div class="card" id="contact">
         <h2 data-lang="ko">문의/예약</h2>
         <h2 data-lang="en">Contact / Booking</h2>
+        <h2 data-lang="ja">お問い合わせ・予約</h2>
+        <h2 data-lang="zh">咨询／预订</h2>
+
         <p data-lang="ko">이메일 <a href="mailto:9878921@naver.com">9878921@naver.com</a> 또는 WhatsApp <b>+63-934-441-4030</b></p>
         <p data-lang="en">Email <a href="mailto:9878921@naver.com">9878921@naver.com</a> or WhatsApp <b>+63-934-441-4030</b></p>
+        <p data-lang="ja">メール <a href="mailto:9878921@naver.com">9878921@naver.com</a> または WhatsApp <b>+63-934-441-4030</b></p>
+        <p data-lang="zh">电子邮件 <a href="mailto:9878921@naver.com">9878921@naver.com</a> 或 WhatsApp <b>+63-934-441-4030</b></p>
+
         <div class="cta">
-          <a class="btn" href="http://pf.kakao.com/_uujGxj/chat" target="_blank" rel="noreferrer">카카오채널 상담</a>
+          <a class="btn" href="http://pf.kakao.com/_uujGxj/chat" target="_blank" rel="noreferrer" data-lang="ko">카카오채널 상담</a>
+          <a class="btn" href="http://pf.kakao.com/_uujGxj/chat" target="_blank" rel="noreferrer" data-lang="en">Kakao Channel</a>
+          <a class="btn" href="http://pf.kakao.com/_uujGxj/chat" target="_blank" rel="noreferrer" data-lang="ja">カカオチャット相談</a>
+          <a class="btn" href="http://pf.kakao.com/_uujGxj/chat" target="_blank" rel="noreferrer" data-lang="zh">Kakao 频道咨询</a>
         </div>
       </div>
     </section>
-    
-<section id="tours">
-  <div class="card">
-    <h2 data-lang="ko">투어 갤러리</h2>
-    <h2 data-lang="en">Tours Gallery</h2>
-    <p data-lang="ko">세부갓투어와 함께하는 인기 포인트</p>
-    <p data-lang="en">Top Highlights with Cebu GodTour</p>
 
-    <div class="tour-grid">
-      <!-- Moalboal Sardines -->
-      <article class="tour-card">
-        <img src="img/moalboal-sardines.jpg" alt="Moalboal sardine run in clear blue water" loading="lazy">
-        <div class="content">
-          <h3 data-lang="ko">모알보알 정어리 런</h3>
-          <h3 data-lang="en">Moalboal Sardine Run</h3>
-          <p data-lang="ko">스노클로 정어리 떼를 눈앞에서!</p>
-          <p data-lang="en">Snorkel with massive sardine schools.</p>
-          <div class="tour-meta">
-            <span class="tag">Snorkeling</span><span class="tag">Half/Full Day</span>
-          </div>
+    <!-- Tours Gallery -->
+    <section id="tours">
+      <div class="card">
+        <h2 data-lang="ko">투어 갤러리</h2>
+        <h2 data-lang="en">Tours Gallery</h2>
+        <h2 data-lang="ja">ツアーギャラリー</h2>
+        <h2 data-lang="zh">旅游图库</h2>
+
+        <p data-lang="ko">세부갓투어와 함께하는 인기 포인트</p>
+        <p data-lang="en">Top Highlights with Cebu GodTour</p>
+        <p data-lang="ja">Cebu GodTour と巡る人気スポット</p>
+        <p data-lang="zh">与 Cebu GodTour 一起走访的人气亮点</p>
+
+        <div class="tour-grid">
+          <!-- Moalboal Sardines -->
+          <article class="tour-card">
+            <img src="img/moalboal-sardines.jpg" alt="Moalboal sardine run in clear blue water" loading="lazy">
+            <div class="content">
+              <h3 data-lang="ko">모알보알 정어리 런</h3>
+              <h3 data-lang="en">Moalboal Sardine Run</h3>
+              <h3 data-lang="ja">モアルボアル・イワシトルネード</h3>
+              <h3 data-lang="zh">莫阿尔博阿尔沙丁鱼风暴</h3>
+              <p data-lang="ko">스노클로 정어리 떼를 눈앞에서!</p>
+              <p data-lang="en">Snorkel with massive sardine schools.</p>
+              <p data-lang="ja">スノーケリングで群れを至近距離で。</p>
+              <p data-lang="zh">浮潜近距离欣赏成群沙丁鱼。</p>
+              <div class="tour-meta">
+                <span class="tag">Snorkeling</span><span class="tag">Half/Full Day</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Oslob Whale Shark -->
+          <article class="tour-card">
+            <img src="img/oslob-whale-shark.jpg" alt="Whale shark encounter at Oslob" loading="lazy">
+            <div class="content">
+              <h3 data-lang="ko">오슬롭 고래상어</h3>
+              <h3 data-lang="en">Oslob Whale Shark</h3>
+              <h3 data-lang="ja">オスロブ・ジンベエザメ体験</h3>
+              <h3 data-lang="zh">奥斯洛布鲸鲨体验</h3>
+              <p data-lang="ko">세부 대표 체험. 이동 포함 전일 코스.</p>
+              <p data-lang="en">Signature Cebu experience. Full-day with transfers.</p>
+              <p data-lang="ja">セブの定番。送迎付き終日ツアー。</p>
+              <p data-lang="zh">宿务代表性体验，含接送的一日行程。</p>
+              <div class="tour-meta">
+                <span class="tag">Encounter</span><span class="tag">Full Day</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kawasan Canyoneering -->
+          <article class="tour-card">
+            <img src="img/kawasan-canyoneering.jpg" alt="Kawasan canyoneering blue canyon" loading="lazy">
+            <div class="content">
+              <h3 data-lang="ko">카와산 캐녀닝</h3>
+              <h3 data-lang="en">Kawasan Canyoneering</h3>
+              <h3 data-lang="ja">カワサン・キャニオニング</h3>
+              <h3 data-lang="zh">卡瓦山溪降</h3>
+              <p data-lang="ko">블루캐년 점프 & 트래킹 액티비티.</p>
+              <p data-lang="en">Jumps & trek through turquoise canyons.</p>
+              <p data-lang="ja">コバルトブルーの渓谷でジャンプ＆トレッキング。</p>
+              <p data-lang="zh">在碧蓝峡谷里跳跃与徒步。</p>
+              <div class="tour-meta">
+                <span class="tag">Adventure</span><span class="tag">Full Day</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Malapascua Thresher -->
+          <article class="tour-card">
+            <img src="img/malapascua-thresher.jpg" alt="Malapascua thresher shark diving" loading="lazy">
+            <div class="content">
+              <h3 data-lang="ko">말라파스쿠아 환도상어</h3>
+              <h3 data-lang="en">Malapascua Thresher Shark</h3>
+              <h3 data-lang="ja">マラパスクア・オナガザメ</h3>
+              <h3 data-lang="zh">马拉帕斯夸长尾鲨</h3>
+              <p data-lang="ko">다이버 성지, 이른 새벽 출조.</p>
+              <p data-lang="en">Diver’s mecca; early-morning trips.</p>
+              <p data-lang="ja">ダイバーの聖地、早朝出発。</p>
+              <p data-lang="zh">潜水胜地，清晨出海。</p>
+              <div class="tour-meta">
+                <span class="tag">Diving</span><span class="tag">Full Day+</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mactan Hopping (파일명 통일 주의) -->
+          <article class="tour-card">
+            <img src="img/mactanhopping.jpg" alt="Mactan island hopping boat and sandbar" loading="lazy">
+            <div class="content">
+              <h3 data-lang="ko">막탄 아일랜드 호핑</h3>
+              <h3 data-lang="en">Mactan Island Hopping</h3>
+              <h3 data-lang="ja">マクタン・アイランドホッピング</h3>
+              <h3 data-lang="zh">麦克坦跳岛</h3>
+              <p data-lang="ko">근교 산호 스팟, 가족 인기 코스.</p>
+              <p data-lang="en">Family-friendly coral spots nearby.</p>
+              <p data-lang="ja">近郊のサンゴスポット、家族に人気。</p>
+              <p data-lang="zh">近郊珊瑚点，亲子友好。</p>
+              <div class="tour-meta">
+                <span class="tag">Boat</span><span class="tag">Half/Full Day</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cebu City Private -->
+          <article class="tour-card">
+            <img src="img/cebu-city-private.jpg" alt="Cebu city private tour viewpoints" loading="lazy">
+            <div class="content">
+              <h3 data-lang="ko">세부시티 단독 프라이빗</h3>
+              <h3 data-lang="en">Cebu City Private Tour</h3>
+              <h3 data-lang="ja">セブ市内プライベート</h3>
+              <h3 data-lang="zh">宿务市区私家团</h3>
+              <p data-lang="ko">원하는 장소 위주 맞춤 진행.</p>
+              <p data-lang="en">Tailored route to places you want.</p>
+              <p data-lang="ja">行きたい所を中心にカスタム。</p>
+              <p data-lang="zh">以你想去的地点为主定制路线。</p>
+              <div class="tour-meta">
+                <span class="tag">Private</span><span class="tag">Custom</span>
+              </div>
+            </div>
+          </article>
         </div>
-      </article>
 
-      <!-- Oslob Whale Shark -->
-      <article class="tour-card">
-        <img src="img/oslob-whale-shark.jpg" alt="Whale shark encounter at Oslob" loading="lazy">
-        <div class="content">
-          <h3 data-lang="ko">오슬롭 고래상어</h3>
-          <h3 data-lang="en">Oslob Whale Shark</h3>
-          <p data-lang="ko">세부 대표 체험. 이동 포함 전일 코스.</p>
-          <p data-lang="en">Signature Cebu experience. Full-day with transfers.</p>
-          <div class="tour-meta">
-            <span class="tag">Encounter</span><span class="tag">Full Day</span>
-          </div>
+        <!-- Optional: global CTA per language -->
+        <div class="cta" style="margin-top:16px" data-lang="ko">
+          <a class="btn primary" href="https://smartstore.naver.com/olivec" target="_blank" rel="noopener">네이버 스토어 예약</a>
+          <a class="btn" href="https://www.kkday.com/ko" target="_blank" rel="noopener">KKDAY 예약</a>
         </div>
-      </article>
-
-      <!-- Kawasan Canyoneering -->
-      <article class="tour-card">
-        <img src="img/kawasan-canyoneering.jpg" alt="Kawasan canyoneering blue canyon" loading="lazy">
-        <div class="content">
-          <h3 data-lang="ko">카와산 캐녀닝</h3>
-          <h3 data-lang="en">Kawasan Canyoneering</h3>
-          <p data-lang="ko">블루캐년 점프 & 트래킹 액티비티.</p>
-          <p data-lang="en">Jumps & trek through turquoise canyons.</p>
-          <div class="tour-meta">
-            <span class="tag">Adventure</span><span class="tag">Full Day</span>
-          </div>
+        <div class="cta" style="margin-top:16px" data-lang="en">
+          <a class="btn primary" href="https://smartstore.naver.com/olivec" target="_blank" rel="noopener">Book on Naver Store</a>
+          <a class="btn" href="https://www.kkday.com/ko" target="_blank" rel="noopener">Book on KKDAY</a>
         </div>
-      </article>
-
-      <!-- Malapascua Thresher -->
-      <article class="tour-card">
-        <img src="img/malapascua-thresher.jpg" alt="Malapascua thresher shark diving" loading="lazy">
-        <div class="content">
-          <h3 data-lang="ko">말라파스쿠아 환도상어</h3>
-          <h3 data-lang="en">Malapascua Thresher Shark</h3>
-          <p data-lang="ko">다이버 성지, 이른 새벽 출조.</p>
-          <p data-lang="en">Diver’s mecca; early-morning trips.</p>
-          <div class="tour-meta">
-            <span class="tag">Diving</span><span class="tag">Full Day+</span>
-          </div>
+        <div class="cta" style="margin-top:16px" data-lang="ja">
+          <a class="btn primary" href="https://smartstore.naver.com/olivec" target="_blank" rel="noopener">ネイバーストアで予約</a>
+          <a class="btn" href="https://www.kkday.com/ko" target="_blank" rel="noopener">KKDAYで予約</a>
         </div>
-      </article>
-
-      <!-- Mactan Hopping -->
-      <article class="tour-card">
-        <img src="img/mactanhopping.jpg" alt="Mactan island hopping boat and sandbar" loading="lazy">
-        <div class="content">
-          <h3 data-lang="ko">막탄 아일랜드 호핑</h3>
-          <h3 data-lang="en">Mactan Island Hopping</h3>
-          <p data-lang="ko">근교 산호 스팟, 가족 인기 코스.</p>
-          <p data-lang="en">Family-friendly coral spots nearby.</p>
-          <div class="tour-meta">
-            <span class="tag">Boat</span><span class="tag">Half/Full Day</span>
-          </div>
+        <div class="cta" style="margin-top:16px" data-lang="zh">
+          <a class="btn primary" href="https://smartstore.naver.com/olivec" target="_blank" rel="noopener">前往 Naver 商店预订</a>
+          <a class="btn" href="https://www.kkday.com/ko" target="_blank" rel="noopener">前往 KKDAY 预订</a>
         </div>
-      </article>
-
-      <!-- Cebu City Private -->
-      <article class="tour-card">
-        <img src="img/cebu-city-private.jpg" alt="Cebu city private tour viewpoints" loading="lazy">
-        <div class="content">
-          <h3 data-lang="ko">세부시티 단독 프라이빗</h3>
-          <h3 data-lang="en">Cebu City Private Tour</h3>
-          <p data-lang="ko">원하는 장소 위주 맞춤 진행.</p>
-          <p data-lang="en">Tailored route to places you want.</p>
-          <div class="tour-meta">
-            <span class="tag">Private</span><span class="tag">Custom</span>
-          </div>
-        </div>
-      </article>
-    </div>
-
-    <div class="cta" style="margin-top:16px">
-      <a class="btn primary" href="https://smartstore.naver.com/olivec" target="_blank" rel="noopener">Naver Store — Book Now</a>
-      <a class="btn" href="https://www.kkday.com/ko" target="_blank" rel="noopener">Book on KKDAY</a>
-    </div>
-  </div> 
-</section>
+      </div> 
+    </section>
 
     <hr>
     <div class="footer">
       <div data-lang="ko">© <span id="y"></span> 갓투어 (GodTour). All rights reserved. · 본 페이지는 공식 회사 소개용입니다.</div>
       <div data-lang="en">© <span id="y2"></span> GodTour. Official company intro page.</div>
+      <div data-lang="ja">© <span id="y"></span> GodTour. 公式会社紹介ページ。</div>
+      <div data-lang="zh">© <span id="y2"></span> GodTour. 官方公司简介页面。</div>
       <script>
         document.getElementById('y').textContent = new Date().getFullYear();
         document.getElementById('y2').textContent = new Date().getFullYear();
